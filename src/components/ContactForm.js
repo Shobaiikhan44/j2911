@@ -1,6 +1,5 @@
-// src/components/ContactForm.js
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -11,12 +10,22 @@ const ContactForm = () => {
     });
 
     const [errors, setErrors] = useState({});
+    const [successMessage, setSuccessMessage] = useState('');
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value
         });
+
+        // Clear the individual error when user corrects the input
+        if (errors[name]) {
+            setErrors({
+                ...errors,
+                [name]: ''
+            });
+        }
     };
 
     const validate = () => {
@@ -35,8 +44,21 @@ const ContactForm = () => {
         if (Object.keys(validationErrors).length === 0) {
             // Handle form submission
             console.log('Form submitted:', formData);
+            setSuccessMessage('Message sent successfully!');
+            setFormData({
+                name: '',
+                email: '',
+                service: '',
+                message: ''
+            });
+
+            // Remove success message after 5 seconds
+            setTimeout(() => {
+                setSuccessMessage('');
+            }, 5000);
         } else {
             setErrors(validationErrors);
+            setSuccessMessage('');
         }
     };
 
@@ -121,6 +143,11 @@ const ContactForm = () => {
                                 </Form.Control.Feedback>
                             </Form.Group>
                             <Button variant="primary" type="submit" className='btn m-4'>Send Message</Button>
+                            {successMessage && (
+                                <Alert variant="success" className='mt-3'>
+                                    {successMessage}
+                                </Alert>
+                            )}
                         </Form>
                     </Col>
                 </Row>
