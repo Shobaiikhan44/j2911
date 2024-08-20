@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+=======
+// src/components/ContactForm.js
+import React, { useState } from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+>>>>>>> 5fbfa5f (first)
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -10,14 +16,18 @@ const ContactForm = () => {
     });
 
     const [errors, setErrors] = useState({});
+<<<<<<< HEAD
     const [successMessage, setSuccessMessage] = useState('');
 
+=======
+>>>>>>> 5fbfa5f (first)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value
         });
+<<<<<<< HEAD
 
         // Clear the individual error when user corrects the input
         if (errors[name]) {
@@ -26,6 +36,8 @@ const ContactForm = () => {
                 [name]: ''
             });
         }
+=======
+>>>>>>> 5fbfa5f (first)
     };
 
     const validate = () => {
@@ -44,6 +56,7 @@ const ContactForm = () => {
         if (Object.keys(validationErrors).length === 0) {
             // Handle form submission
             console.log('Form submitted:', formData);
+<<<<<<< HEAD
             setSuccessMessage('Message sent successfully!');
             setFormData({
                 name: '',
@@ -59,6 +72,10 @@ const ContactForm = () => {
         } else {
             setErrors(validationErrors);
             setSuccessMessage('');
+=======
+        } else {
+            setErrors(validationErrors);
+>>>>>>> 5fbfa5f (first)
         }
     };
 
@@ -143,11 +160,14 @@ const ContactForm = () => {
                                 </Form.Control.Feedback>
                             </Form.Group>
                             <Button variant="primary" type="submit" className='btn m-4'>Send Message</Button>
+<<<<<<< HEAD
                             {successMessage && (
                                 <Alert variant="success" className='mt-3'>
                                     {successMessage}
                                 </Alert>
                             )}
+=======
+>>>>>>> 5fbfa5f (first)
                         </Form>
                     </Col>
                 </Row>
