@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-// src/App.js
->>>>>>> 5fbfa5f (first)
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -14,35 +10,13 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import AboutUsE from "./components/AboutUsE";
 import OurServices from "./components/OurServices";
-<<<<<<< HEAD
+
 import ScrollToTop from "./components/ScrollToTop"; // Import ScrollToTop
 
 const App = () => {
     return (
         <Router>
             <ScrollToTop /> {/* Add ScrollToTop here */}
-            <div>
-                <Header />
-                <Routes>
-                    <Route path="/" element={<>
-                        <HeroSection />
-                        <AboutUs />
-                        <Services />
-                        <WhyChooseUs />
-                        <ContactForm />
-                    </>} />
-                    <Route path="/ourServices" element={<>
-                        <OurServices />
-                        <ContactForm />
-                    </>} />
-                    <Route path="/about" element={<>
-                        <AboutUsE />
-                        <ContactForm />
-                    </>} />
-=======
-const App = () => {
-    return (
-        <Router>
             <div>
                 <Header />
                 <Routes>
@@ -58,13 +32,24 @@ const App = () => {
                             </>
                         } 
                     />
-                    <Route path="/ourServices" element={ <>
-                        <OurServices /> 
-                        <ContactForm />
-                        </>} />
-                    <Route path="/about" element={ <> <AboutUsE />  
-                     <ContactForm /></>    } />
->>>>>>> 5fbfa5f (first)
+                    <Route 
+                        path="/ourServices" 
+                        element={
+                            <>
+                                <OurServices /> 
+                                <ContactForm />
+                            </>
+                        } 
+                    />
+                    <Route 
+                        path="/about" 
+                        element={
+                            <>
+                                <AboutUsE />  
+                                <ContactForm />
+                            </>
+                        } 
+                    />
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/why-choose-us" element={<WhyChooseUs />} />
                 </Routes>

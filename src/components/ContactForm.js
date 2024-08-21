@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
-=======
-// src/components/ContactForm.js
-import React, { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
->>>>>>> 5fbfa5f (first)
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -16,18 +10,14 @@ const ContactForm = () => {
     });
 
     const [errors, setErrors] = useState({});
-<<<<<<< HEAD
     const [successMessage, setSuccessMessage] = useState('');
 
-=======
->>>>>>> 5fbfa5f (first)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value
         });
-<<<<<<< HEAD
 
         // Clear the individual error when user corrects the input
         if (errors[name]) {
@@ -36,8 +26,6 @@ const ContactForm = () => {
                 [name]: ''
             });
         }
-=======
->>>>>>> 5fbfa5f (first)
     };
 
     const validate = () => {
@@ -56,7 +44,6 @@ const ContactForm = () => {
         if (Object.keys(validationErrors).length === 0) {
             // Handle form submission
             console.log('Form submitted:', formData);
-<<<<<<< HEAD
             setSuccessMessage('Message sent successfully!');
             setFormData({
                 name: '',
@@ -72,30 +59,27 @@ const ContactForm = () => {
         } else {
             setErrors(validationErrors);
             setSuccessMessage('');
-=======
-        } else {
-            setErrors(validationErrors);
->>>>>>> 5fbfa5f (first)
         }
     };
 
     return (
-        <div className="my-5 bg-light" style={{ padding: '100px' }}>
+        <div className="my-5 bg-light" style={{ padding: '50px 15px' }}>
             <Container>
                 <Row>
-                    <Col md={6}>
+                    <Col md={6} className="mb-4">
                         <div className='mt-4'>
-                            <h1>Let's Shape the <br />Future Together!</h1>
-                            <p>Whether you're aiming to optimize your ICT 
-                                <br />infrastructure, drive business growth, 
-                                navigate  <br />regulatory
-                                landscapes, or form  strategic<br /> partnerships, 
-                                J2911 RESOURCES  LLC is <br />
-                                here to guide you every step of 
-                                <br /> the way.Let's embark on a journey of 
-                                <br />innovation, growth, and success. Contact
-                                <br /> us today to explore how we can elevate 
-                                <br /> your organization to new heights.</p>
+                            <h1 className="display-5">Let's Shape the <br />Future Together!</h1>
+                            <p className="lead">
+                                Whether you're aiming to optimize your ICT 
+                                infrastructure, drive business growth, 
+                                navigate regulatory landscapes, or form 
+                                strategic partnerships, J2911 RESOURCES LLC 
+                                is here to guide you every step of the way. 
+                                Let's embark on a journey of innovation, 
+                                growth, and success. Contact us today to 
+                                explore how we can elevate your organization 
+                                to new heights.
+                            </p>
                         </div>
                     </Col>
                     <Col md={6}>
@@ -159,15 +143,14 @@ const ContactForm = () => {
                                     {errors.message}
                                 </Form.Control.Feedback>
                             </Form.Group>
-                            <Button variant="primary" type="submit" className='btn m-4'>Send Message</Button>
-<<<<<<< HEAD
+                            <Button variant="primary" type="submit" className="btn m-4 w-100 w-md-auto">
+                                Send Message
+                            </Button>
                             {successMessage && (
-                                <Alert variant="success" className='mt-3'>
+                                <Alert variant="success" className="mt-3">
                                     {successMessage}
                                 </Alert>
                             )}
-=======
->>>>>>> 5fbfa5f (first)
                         </Form>
                     </Col>
                 </Row>

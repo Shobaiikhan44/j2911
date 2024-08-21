@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-// src/components/Footer.js
->>>>>>> 5fbfa5f (first)
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -14,11 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-<<<<<<< HEAD
         <div style={{ backgroundColor: "#00008B", gap: '20px' }}>
-=======
-        <div style={{ 'backgroundColor': "#00008B", gap: '20px' }}>
->>>>>>> 5fbfa5f (first)
             <Container fluid className="text-white py-4">
                 <Row className="justify-content-center p-5">
                     <Col md={6}>
@@ -29,14 +21,8 @@ const Footer = () => {
                                 <Form.Control type="email" placeholder="Enter your email" style={{ display: 'flex', border: '0', width: '300px' }} />
                             </Form.Group>
                             <Button type="submit" style={{ backgroundColor: 'yellow', color: 'black', marginTop: '20px', marginBottom: '50px' }}>
-<<<<<<< HEAD
                                 Subscribe &nbsp; <FontAwesomeIcon icon={faArrowRight} />
                             </Button>
-=======
-  Subscribe &nbsp; <FontAwesomeIcon icon={faArrowRight} />
-</Button>
-
->>>>>>> 5fbfa5f (first)
                         </Form>
                     </Col>
                     <Col md={6} className="text-md-right mt-4 justify-content-center">
