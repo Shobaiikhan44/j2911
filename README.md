@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 view project :     https://vocal-pudding-3a4dd0.netlify.app
 =======
 >>>>>>> 5fbfa5f (first)
+=======
+>>>>>>> 5fbfa5f5731bb782e7933c22c9097789f88a5566
 **J2911 Resources LLC**
 Welcome to J2911 Resources LLC GitHub repository!
 

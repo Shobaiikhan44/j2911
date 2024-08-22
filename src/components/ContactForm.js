@@ -10,7 +10,7 @@ const ContactForm = () => {
     });
 
     const [errors, setErrors] = useState({});
-    const [successMessage, setSuccessMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState(''); // Include successMessage
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -58,7 +58,7 @@ const ContactForm = () => {
             }, 5000);
         } else {
             setErrors(validationErrors);
-            setSuccessMessage('');
+            setSuccessMessage(''); // Clear success message on error
         }
     };
 
