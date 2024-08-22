@@ -27,7 +27,7 @@ const Footer = () => {
                     </Col>
                     <Col md={6} className="text-md-right mt-4 justify-content-center">
                         <Row>
-                            <Col md={4}>
+                            <Col xs={6} sm={6} md={4}>
                                 <h6 className="mb-4">Quick Links</h6>
                                 <ul className="list-unstyled mb-3">
                                     <li className="mb-4"><Link to="/" className="text-white text-decoration-none">Home</Link></li>
@@ -36,7 +36,7 @@ const Footer = () => {
                                     <li className="mb-4"><Link to="/contact" className="text-white text-decoration-none">Contact Us</Link></li>
                                 </ul>
                             </Col>
-                            <Col md={4}>
+                            <Col xs={6} sm={6} md={4}>
                                 <h6 className="mb-4">Utility Pages</h6>
                                 <ul className="list-unstyled">
                                     <li className="mb-4"><Link to="/instruction" className="text-white text-decoration-none">Instruction</Link></li>
@@ -45,7 +45,7 @@ const Footer = () => {
                                     <li className="mb-4"><Link to="/404" className="text-white text-decoration-none">404 Not Found</Link></li>
                                 </ul>
                             </Col>
-                            <Col md={4}>
+                            <Col xs={12} sm={12} md={4}>
                                 <h6 className="mb-4">Resources</h6>
                                 <ul className="list-unstyled">
                                     <li className="mb-4"><Link to="/support" className="text-white text-decoration-none">Support</Link></li>
@@ -57,7 +57,7 @@ const Footer = () => {
                         </Row>
                     </Col>
                 </Row>
-                <Row className='border-top border-2 border-gray mt-4'>
+                <Row className=' mt-4'>
                     <Col md={6} className='mt-4'>
                         <p>&copy; 2024 J2911 Resources LLC. All rights reserved.</p>
                     </Col>

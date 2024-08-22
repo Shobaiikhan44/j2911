@@ -7,11 +7,11 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const HeroSection = () => {
   return (
-    <Container className="text-start my-5">
+    <Container className="text-start my-0">
       <Row className="align-items-center">
-        <Col md={6} xs={{ order: 2 }} className="text-start mt-md-0 mt-4">
+        <Col md={6} xs={12} className="text-start mt-md-0 mt-0">
           <div style={{ marginTop: '100px' }}>
-            <p className="badge bg-secondary">Your resourceful partner</p>
+            <p className="badge bg-primary">Your resourceful partner</p>
             <h1>Empowering</h1>
             <h1>Organizations for a</h1>
             <h1>Dynamic Future</h1>
@@ -29,7 +29,7 @@ const HeroSection = () => {
             </Button>
           </div>
         </Col>
-        <Col md={6} xs={{ order: 1 }}>
+        <Col md={6} xs={12} className="order-md-2 order-1 mt-4">
           <Image src={hero} alt="Hero Image" fluid />
         </Col>
       </Row>
