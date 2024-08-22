@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ const ContactForm = () => {
     });
 
     const [errors, setErrors] = useState({});
-    const [successMessage, setSuccessMessage] = useState(''); // Include successMessage
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -42,7 +43,6 @@ const ContactForm = () => {
         e.preventDefault();
         const validationErrors = validate();
         if (Object.keys(validationErrors).length === 0) {
-            // Handle form submission
             console.log('Form submitted:', formData);
             setSuccessMessage('Message sent successfully!');
             setFormData({
@@ -52,23 +52,24 @@ const ContactForm = () => {
                 message: ''
             });
 
-            // Remove success message after 5 seconds
             setTimeout(() => {
                 setSuccessMessage('');
             }, 5000);
         } else {
             setErrors(validationErrors);
-            setSuccessMessage(''); // Clear success message on error
+            setSuccessMessage('');
         }
     };
 
     return (
-        <div className="my-5 bg-light" style={{ padding: '50px 15px' }}>
+        <div className="my-5 bg-light" style={{ padding: '50px 15px', fontFamily: "'Lora', serif" }}>
             <Container>
                 <Row>
                     <Col md={6} className="mb-4">
                         <div className='mt-4'>
-                            <h1 className="display-5">Let's Shape the <br />Future Together!</h1>
+                            <h1 className="display-5" style={{ fontFamily: "'Roboto', sans-serif", fontWeight: 'bold' }}>
+                                Let's Shape the <br />Future Together!
+                            </h1>
                             <p className="lead">
                                 Whether you're aiming to optimize your ICT 
                                 infrastructure, drive business growth, 
@@ -92,6 +93,7 @@ const ContactForm = () => {
                                     value={formData.name} 
                                     onChange={handleChange} 
                                     isInvalid={!!errors.name}
+                                    style={{ fontFamily: "'Roboto', sans-serif" }}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     {errors.name}
@@ -105,6 +107,7 @@ const ContactForm = () => {
                                     value={formData.email} 
                                     onChange={handleChange} 
                                     isInvalid={!!errors.email}
+                                    style={{ fontFamily: "'Roboto', sans-serif" }}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     {errors.email}
@@ -118,6 +121,7 @@ const ContactForm = () => {
                                     value={formData.service} 
                                     onChange={handleChange} 
                                     isInvalid={!!errors.service}
+                                    style={{ fontFamily: "'Roboto', sans-serif" }}
                                 >
                                     <option value="">Select a service</option>
                                     <option value="ICT Consulting">ICT Consulting</option>
@@ -138,16 +142,17 @@ const ContactForm = () => {
                                     value={formData.message} 
                                     onChange={handleChange} 
                                     isInvalid={!!errors.message}
+                                    style={{ fontFamily: "'Roboto', sans-serif" }}
                                 />
                                 <Form.Control.Feedback type="invalid">
                                     {errors.message}
                                 </Form.Control.Feedback>
                             </Form.Group>
-                            <Button variant="primary" type="submit" className="btn m-4 w-100 w-md-auto">
+                            <Button variant="primary" type="submit" className="btn m-4 w-100 w-md-auto" style={{ fontFamily: "'Roboto', sans-serif" }}>
                                 Send Message
                             </Button>
                             {successMessage && (
-                                <Alert variant="success" className="mt-3">
+                                <Alert variant="success" className="mt-3" style={{ fontFamily: "'Roboto', sans-serif" }}>
                                     {successMessage}
                                 </Alert>
                             )}
